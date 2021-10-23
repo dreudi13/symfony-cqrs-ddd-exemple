@@ -1,0 +1,12 @@
+{
+    "navigator.destinations": {
+        "blog_src": "src/Blog/src/<kernel>.php",
+        "blog_spec": "src/Blog/spec/<kernel>Spec.php"
+    },
+    "navigator.autocreate": {
+        "source": "default",
+        "test": "phpunit"
+    },
+    "code_transform.refactor.generate_accessor.prefix": "get",
+    "code_transform.refactor.generate_accessor.upper_case_first": true
+}

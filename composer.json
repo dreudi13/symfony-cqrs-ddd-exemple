@@ -44,7 +44,10 @@
         "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
+        "phpspec/phpspec": "^7.1",
+        "phpstan/phpstan": "^0.12.99",
         "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.6",
         "symfony/browser-kit": "5.3.*",
         "symfony/css-selector": "5.3.*",
         "symfony/debug-bundle": "5.3.*",
@@ -62,12 +65,14 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/App/",
+            "Blog\\": "src/Blog/src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/"
+            "App\\Tests\\": "tests/",
+            "spec\\Blog\\": "src/Blog/spec/"
         }
     },
     "replace": {
@@ -76,6 +81,11 @@
         "symfony/polyfill-php72": "*"
     },
     "scripts": {
+        "sniff": "php ./vendor/bin/phpcs",
+        "fixer": "php ./vendor/bin/phpcbf",
+        "desc": "php ./vendor/bin/phpspec describe",
+        "spec": "php ./vendor/bin/phpspec run",
+        "stan": "php ./vendor/bin/phpstan analyze",
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"

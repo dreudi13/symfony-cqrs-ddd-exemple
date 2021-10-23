@@ -1,0 +1,4 @@
+suites:
+    Blog: { namespace: Blog, psr4_prefix: Blog, spec_path: src/Blog, src_path: src/Blog/src }
+
+formatter.name: pretty
