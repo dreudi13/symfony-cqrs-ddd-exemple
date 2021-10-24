@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches:
+        - develop
+        - feature/*
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  Quality:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: composer install
+
+    - name: Php Code Sniffer
+      run: composer sniff
+
+    - name: Phpstan
+      run: composer stan
+
+  Tests:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: composer install
+
+    - name: Phpstan
+      run: composer spec
