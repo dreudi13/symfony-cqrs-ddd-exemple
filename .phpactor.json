@@ -1,7 +1,9 @@
 {
     "navigator.destinations": {
         "blog_src": "src/Blog/src/<kernel>.php",
-        "blog_spec": "src/Blog/spec/<kernel>Spec.php"
+        "blog_spec": "src/Blog/spec/<kernel>Spec.php",
+        "common_src": "src/Common/src/<kernel>.php",
+        "common_spec": "src/Common/spec/<kernel>Spec.php"
     },
     "navigator.autocreate": {
         "source": "default",

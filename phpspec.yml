@@ -1,4 +1,6 @@
 suites:
+
     Blog: { namespace: Blog, psr4_prefix: Blog, spec_path: src/Blog, src_path: src/Blog/src }
+    Common: { namespace: Common, psr4_prefix: Common, spec_path: src/Common, src_path: src/Common/src }
 
 formatter.name: pretty
