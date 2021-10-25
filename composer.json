@@ -66,13 +66,15 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/App/",
-            "Blog\\": "src/Blog/src/"
+            "Blog\\": "src/Blog/src/",
+            "Common\\": "src/Common/src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "App\\Tests\\": "tests/",
-            "spec\\Blog\\": "src/Blog/spec/"
+            "spec\\Blog\\": "src/Blog/spec/",
+            "spec\\Common\\": "src/Common/spec/"
         }
     },
     "replace": {

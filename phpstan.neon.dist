@@ -2,6 +2,9 @@ parameters:
     level: 8
     paths:
         - src/App
+        - src/Blog/src
+        - src/Common/src
         - public
     excludePaths:
         - src/Blog/spec
+        - src/Common/spec
